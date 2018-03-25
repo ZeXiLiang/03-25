@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {font-size: 125%;}
+        .aa {font-size: 20px;}
+        .p {font-size: 3em;color: #f60;}
+        .p2 {font-size: 3rem;}
+     /*   
+        @media screen and (max-device-width:1200px){
+            .p2 {
+                font-size: 200%;
+        }
+        @media screen and (max-device-width:800px){
+               .p2 {font-size: 125%;}
+            }
+        @media screen and (max-device-width:500px){
+                .p2 {font-size: 100%;}
+            }
+            @media screen and (max-device-width:300px){
+                .p2 {font-size: 62.5%;}
+            }
+            */
+    </style>
+</head>
+    
+<body> 
+  <a class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+    <!-- 
+    
+    <div class="aa">
+        <p class="p">B冰河时代极限试听320k</p>
+    </div>
+    <p class="p2">紫水晶试音王-试听320k</p>
+      -->
+    <script>
+    
+    (function (doc,win){
+        var docEl = doc.documentElement,
+        resizeEvt =  'orientationchange' in window ? 'orientationchange': 'resize',
+        recalc  = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            docEl.style.fontSize = 5 * (clientWidth / 320) + 'px';
+        };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt,recalc,false);
+        doc.addEventListener('DOMContentLoaded',recalc,false);
+    })(document,window);
+    
+    </script>
+  
+</body>
+</html>
